@@ -18,18 +18,16 @@
         .logo-item { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 180px; height: 90px; }
         .logo-item img { max-height: 65px; max-width: 100%; object-fit: contain; }
 
-        /* Ensuring the 2-line descriptions are clean and justified */
+        /* Smooth justified distribution layout without line-clamp truncation drops */
         .project-desc {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
             text-align: justify;
+            text-justify: inter-word;
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
 
+    <!-- NAVIGATION -->
     <nav class="nav-glass text-white fixed w-full z-50 border-b border-slate-700">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -48,6 +46,7 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section id="home" class="relative min-h-screen flex items-center bg-slate-900 text-white overflow-hidden">
         <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Electrical Contractor">
         <div class="absolute inset-0 hero-overlay"></div>
@@ -64,6 +63,7 @@
         </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="mb-16 max-w-3xl">
@@ -91,6 +91,7 @@
         </div>
     </section>
 
+    <!-- PORTFOLIO -->
     <section id="portfolio" class="py-24 bg-slate-900 text-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -98,6 +99,7 @@
                 <p class="text-yellow-500 font-bold uppercase tracking-widest text-sm">Clients • Projects • Electrical Scope</p>
             </div>
 
+            <!-- Client Moving Bar -->
             <div class="mb-20 overflow-hidden border-b border-t border-slate-800 py-4">
                 <h3 class="text-2xl font-black uppercase mb-8">Clients</h3>
                 <div class="logo-slider">
@@ -116,6 +118,7 @@
                         <div class="logo-item"><img src="logos/lowes.jpeg" alt="Lowes"></div>
                         <div class="logo-item"><img src="logos/ralphs.jpeg" alt="Ralphs"></div>
                         <div class="logo-item"><img src="logos/stoneage.jpeg" alt="Stone Age"></div>
+                        <!-- Loop Mirror -->
                         <div class="logo-item"><img src="logos/24hourfitness.jpeg" alt="24 Hour Fitness"></div>
                         <div class="logo-item"><img src="logos/american-meat.jpeg" alt="American Meat"></div>
                         <div class="logo-item"><img src="logos/burger-king.jpeg" alt="Burger King"></div>
@@ -134,114 +137,127 @@
                 </div>
             </div>
 
+            <!-- GALLERY -->
             <h3 class="text-2xl font-black uppercase mb-8">Project Gallery</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
+                <!-- Project 1 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/1.JPG" class="h-64 w-full object-cover" alt="Ralphs" onerror="this.src='projects/1.jpg'; this.onerror=function(){this.src='projects/1.jpeg'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">Ralphs</h3>
-                        <p class="text-sm text-slate-400 project-desc">Installed customized overhead lighting, high-capacity power drops, main electrical panels, and complete conduit infrastructure.</p>
+                        <p class="text-sm text-slate-400 project-desc">Installed customized overhead lighting layouts, high-capacity electrical power drops, service distribution panels, and complex site conduit systems.</p>
                     </div>
                 </div>
 
+                <!-- Project 2 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/2.jpeg" class="h-64 w-full object-cover" alt="American Meat" onerror="this.src='projects/2.jpg'; this.onerror=function(){this.src='projects/2.JPG'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Industrial</p>
                         <h3 class="text-xl font-bold mb-3">American Meat</h3>
-                        <p class="text-sm text-slate-400 project-desc">Assembled custom automation control panels and integrated complex wire routing for commercial refrigeration sensor networks.</p>
+                        <p class="text-sm text-slate-400 project-desc">Assembled custom automation panels and integrated complex structural system wire routing to service specialized industrial refrigeration machinery sensors.</p>
                     </div>
                 </div>
 
+                <!-- Project 3 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/3.jpg" class="h-64 w-full object-cover" alt="Westminster Mall" onerror="this.src='projects/3.jpeg'; this.onerror=function(){this.src='projects/3.JPG'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">Westminster Mall</h3>
-                        <p class="text-sm text-slate-400 project-desc">Managed large-scale structural power delivery to core buildings alongside extensive outdoor parking lot illumination systems.</p>
+                        <p class="text-sm text-slate-400 project-desc">Managed heavy structural circuit delivery to main mall units along with expansive open-air parking lot structural lighting distribution panel arrays.</p>
                     </div>
                 </div>
 
+                <!-- Project 4 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/4.jpg" class="h-64 w-full object-cover" alt="J&J Snack Foods" onerror="this.src='projects/4.jpeg'; this.onerror=function(){this.src='projects/4.JPG'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Industrial</p>
                         <h3 class="text-xl font-bold mb-3">J&J Snack Foods</h3>
-                        <p class="text-sm text-slate-400 project-desc">Supplied robust multi-panel electrical distributions and high-efficiency production floor lighting for a factory plant expansion.</p>
+                        <p class="text-sm text-slate-400 project-desc">Supplied robust multi-panel electrical safety distribution lines and high-efficiency production plant warehouse framework illumination for clean expansions.</p>
                     </div>
                 </div>
 
+                <!-- Project 5 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/5.jpeg" class="h-64 w-full object-cover" alt="Lowe's" onerror="this.src='projects/5.jpg'; this.onerror=function(){this.src='projects/5.JPG'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">Lowe's</h3>
-                        <p class="text-sm text-slate-400 project-desc">Outfitted complete facility electrical layouts, including massive conduit networks, utility service panelboards, and retail lighting.</p>
+                        <p class="text-sm text-slate-400 project-desc">Outfitted complete retail facility layouts with broad metallic conduit runs, main building supply switchboards, and overhead retail floor fixtures.</p>
                     </div>
                 </div>
 
+                <!-- Project 6 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/6.JPG" class="h-64 w-full object-cover" alt="Fletcher Jones" onerror="this.src='projects/6.jpg'; this.onerror=function(){this.src='projects/6.jpeg'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">Fletcher Jones</h3>
-                        <p class="text-sm text-slate-400 project-desc">Configured specialized high-bay task lighting, vehicle service-bay panels, and dedicated heavy-equipment workshop power circuits.</p>
+                        <p class="text-sm text-slate-400 project-desc">Configured commercial task bay lighting networks, specialized equipment machine circuit drops, and dedicated service department layout supply panels.</p>
                     </div>
                 </div>
 
+                <!-- Project 7 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/7.jpeg" class="h-64 w-full object-cover" alt="Carl's Junior" onerror="this.src='projects/7.jpg'; this.onerror=function(){this.src='projects/7.JPG'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">Carl's Junior</h3>
-                        <p class="text-sm text-slate-400 project-desc">Executed targeted commercial kitchen branch wiring, equipment power connections, and safety subpanel upgrades for tenant build-outs.</p>
+                        <p class="text-sm text-slate-400 project-desc">Executed precise tenant space modifications, matching dedicated kitchen appliance line installation with high-load facility electrical safety system panels.</p>
                     </div>
                 </div>
 
+                <!-- Project 8 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/8.JPG" class="h-64 w-full object-cover" alt="24 Hour Fitness" onerror="this.src='projects/8.jpg'; this.onerror=function(){this.src='projects/8.jpeg'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">24 Hour Fitness</h3>
-                        <p class="text-sm text-slate-400 project-desc">Relocated dedicated cardio equipment circuits, low-voltage media display wiring, main gym floor illumination, and subpanels.</p>
+                        <p class="text-sm text-slate-400 project-desc">Relocated extensive cardio hardware drops, structural media center wire paths, general main tracking lighting layouts, and local supply circuitry lines.</p>
                     </div>
                 </div>
 
+                <!-- Project 9 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/9.jpeg" class="h-64 w-full object-cover" alt="Cyron Lighting" onerror="this.src='projects/9.jpg'; this.onerror=function(){this.src='projects/9.JPG'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Industrial</p>
                         <h3 class="text-xl font-bold mb-3">Cyron Lighting</h3>
-                        <p class="text-sm text-slate-400 project-desc">Wired dedicated high-voltage machinery lines, automated equipment circuit drops, and industrial task support lighting systems.</p>
+                        <p class="text-sm text-slate-400 project-desc">Wired heavy machine terminal boxes, customized manufacturing automation device connections, and commercial task area lighting installations.</p>
                     </div>
                 </div>
 
+                <!-- Project 10 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/10.JPG" class="h-64 w-full object-cover" alt="Don Jose Restaurant" onerror="this.src='projects/10.jpg'; this.onerror=function(){this.src='projects/10.jpeg'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">Don Jose Restaurant</h3>
-                        <p class="text-sm text-slate-400 project-desc">Renovated complete restaurant electrical setups, combining ambient dining room illumination tracks with high-amp kitchen power.</p>
+                        <p class="text-sm text-slate-400 project-desc">Renovated comprehensive food service operations wiring, balancing interior ambient venue track light spaces with commercial kitchen service panels.</p>
                     </div>
                 </div>
 
+                <!-- Project 11 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/11.jpg" class="h-64 w-full object-cover" alt="DHX" onerror="this.src='projects/11.jpeg'; this.onerror=function(){this.src='projects/11.JPG'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">DHX</h3>
-                        <p class="text-sm text-slate-400 project-desc">Deployed heavy-duty logistics warehouse power drops, industrial safety circuitry, and energy-efficient warehouse lighting arrays.</p>
+                        <p class="text-sm text-slate-400 project-desc">Deployed efficient logistics facility high-bay layouts, heavy storage zone panel connections, and main infrastructure distribution systems.</p>
                     </div>
                 </div>
 
+                <!-- Project 12 -->
                 <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
                     <img src="projects/12.jpg" class="h-64 w-full object-cover" alt="Burger King" onerror="this.src='projects/12.jpeg'; this.onerror=function(){this.src='projects/12.JPG'}">
                     <div class="p-6">
                         <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
                         <h3 class="text-xl font-bold mb-3">Burger King</h3>
-                        <p class="text-sm text-slate-400 project-desc">Constructed ground-up fast-food electrical infrastructures, handling complete kitchen utility routing, general lighting, and breakers.</p>
+                        <p class="text-sm text-slate-400 project-desc">Constructed total ground-up business power structures, managing complete preparation zone equipment power loops and standard layout load breakers.</p>
                     </div>
                 </div>
 
@@ -249,6 +265,7 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto bg-slate-50 rounded-3xl shadow-2xl overflow-hidden flex flex-wrap">
@@ -279,10 +296,11 @@
                             <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-2">Cellphone</p>
                             <p class="text-xl font-black text-slate-900">(949) 883-8611</p>
                         </div>
-                        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
+                        <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm overflow-hidden">
                             <i class="fas fa-envelope text-3xl text-yellow-600 mb-5"></i>
                             <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-2">Email</p>
-                            <p class="text-xl font-black text-slate-900 whitespace-nowrap overflow-hidden text-ellipsis">contact@akelectricworks.com</p>
+                            <!-- Adjusted font sizes and scaling behavior to force a flat, one-line rule -->
+                            <p class="text-base sm:text-lg lg:text-xl font-black text-slate-900 whitespace-nowrap tracking-tight">contact@akelectricworks.com</p>
                         </div>
                         <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm md:col-span-2">
                             <i class="fas fa-location-dot text-3xl text-yellow-600 mb-5"></i>
