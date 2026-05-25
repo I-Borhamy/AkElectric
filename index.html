@@ -11,17 +11,18 @@
         .nav-glass { background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(10px); }
         .hero-overlay { background: linear-gradient(to right, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.45)); }
         
-        /* LOGO SCROLLING */
-        .logo-slider { overflow: hidden; padding: 40px 0; background: white; white-space: nowrap; position: relative; }
-        .logo-track { display: inline-flex; animation: scroll 35s linear infinite; }
+        /* LOGO SCROLLING (Seamless Dark Theme Track) */
+        .logo-slider { overflow: hidden; padding: 30px 0; background: transparent; white-space: nowrap; position: relative; }
+        .logo-track { display: inline-flex; animation: scroll 35s linear infinite; gap: 40px; }
         .logo-track:hover { animation-play-state: paused; }
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        .logo-item { background: white; border: 1px solid #f1f5f9; border-radius: 8px; margin: 0 15px; width: 220px; height: 110px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 15px; }
-        .logo-item img { max-height: 70px; max-width: 100%; object-fit: contain; }
+        .logo-item { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 180px; height: 90px; }
+        .logo-item img { max-height: 65px; max-width: 100%; object-fit: contain; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
 
+    <!-- NAVIGATION -->
     <nav class="nav-glass text-white fixed w-full z-50 border-b border-slate-700">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -40,6 +41,7 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section id="home" class="relative min-h-screen flex items-center bg-slate-900 text-white overflow-hidden">
         <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Electrical Contractor">
         <div class="absolute inset-0 hero-overlay"></div>
@@ -49,13 +51,14 @@
                 <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">Commercial & Industrial Electrical Contractors</h2>
                 <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl">AK Electric is a California licensed C-10 electrical contractor serving commercial and industrial clients across Southern California.</p>
                 <div class="flex flex-wrap gap-4 font-bold uppercase tracking-widest text-xs">
-                    <a href="#portfolio" class="bg-yellow-500 text-slate-900 px-10 py-4 hover:bg-white transition">View Portfolio</a>
-                    <a href="#services" class="border border-white px-10 py-4 hover:bg-white hover:text-slate-900 transition">Our Services</a>
+                    <a href="#portfolio" class="bg-yellow-500 text-slate-900 px-10 py-4 hover:bg-white transition shadow-xl">View Portfolio</a>
+                    <a href="#services" class="border border-white px-10 py-4 hover:bg-white hover:text-slate-900 transition shadow-xl">Our Services</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="mb-16 max-w-3xl">
@@ -67,22 +70,23 @@
                 <div class="p-8 border border-slate-100 bg-slate-50 rounded-lg hover:shadow-2xl transition group">
                     <i class="fas fa-building text-3xl text-yellow-600 mb-6 group-hover:scale-110 transition"></i>
                     <h3 class="text-2xl font-bold mb-6">New Commercial Construction</h3>
-                    <p class="text-sm text-slate-600 leading-7">From the ground up, we design and install complete electrical infrastructures for new commercial buildings, warehouses, and facilities. Our team manages the entire process—including main service panels, heavy-duty switchgear, and full-building wiring—ensuring your new property is built to maximum efficiency, safety, and California code compliance from day one.</p>
+                    <p class="text-sm text-slate-600 leading-7">From the ground up, we design and install complete electrical infrastructures for new commercial buildings and warehouses.</p>
                 </div>
                 <div class="p-8 border border-slate-100 bg-slate-50 rounded-lg hover:shadow-2xl transition group">
                     <i class="fas fa-tools text-3xl text-yellow-600 mb-6 group-hover:scale-110 transition"></i>
                     <h3 class="text-2xl font-bold mb-6">Commercial Tenant Improvements</h3>
-                    <p class="text-sm text-slate-600 leading-7">Whether you are moving into a new space or remodeling an existing one, we specialize in tailoring electrical layouts to match your business operations. From panel upgrades and subpanel installations to reconfiguring wiring for specialized equipment, office layouts, and retail spaces, we minimize downtime and maximize your space's utility.</p>
+                    <p class="text-sm text-slate-600 leading-7">Specialized electrical layouts for retail, office remodeling, and reconfiguring wiring for industrial equipment.</p>
                 </div>
                 <div class="p-8 border border-slate-100 bg-slate-50 rounded-lg hover:shadow-2xl transition group">
                     <i class="fas fa-industry text-3xl text-yellow-600 mb-6 group-hover:scale-110 transition"></i>
                     <h3 class="text-2xl font-bold mb-6">Industrial Electrical Infrastructure</h3>
-                    <p class="text-sm text-slate-600 leading-7">We deliver high-capacity power solutions engineered for manufacturing plants, processing facilities, and heavy-duty industrial environments. Our expertise covers motor control centers, three-phase power distribution, and reliable backup generation systems designed to keep your facility operating without interruption.</p>
+                    <p class="text-sm text-slate-600 leading-7">High-capacity power solutions, motor control centers, and reliable backup generation for processing facilities.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- PORTFOLIO / LOGO BAR -->
     <section id="portfolio" class="py-24 bg-slate-900 text-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -90,7 +94,8 @@
                 <p class="text-yellow-500 font-bold uppercase tracking-widest text-sm">Clients • Projects • Electrical Scope</p>
             </div>
 
-            <div class="mb-20 overflow-hidden">
+            <!-- Client Moving Bar (Matches your .jpeg logo files) -->
+            <div class="mb-20 overflow-hidden border-b border-t border-slate-800 py-4">
                 <h3 class="text-2xl font-black uppercase mb-8">Clients</h3>
                 <div class="logo-slider">
                     <div class="logo-track">
@@ -108,6 +113,7 @@
                         <div class="logo-item"><img src="logos/lowes.jpeg" alt="Lowes"></div>
                         <div class="logo-item"><img src="logos/ralphs.jpeg" alt="Ralphs"></div>
                         <div class="logo-item"><img src="logos/stoneage.jpeg" alt="Stone Age"></div>
+                        <!-- Loop Mirror -->
                         <div class="logo-item"><img src="logos/24hourfitness.jpeg" alt="24 Hour Fitness"></div>
                         <div class="logo-item"><img src="logos/american-meat.jpeg" alt="American Meat"></div>
                         <div class="logo-item"><img src="logos/burger-king.jpeg" alt="Burger King"></div>
@@ -126,64 +132,135 @@
                 </div>
             </div>
 
+            <!-- GALLERY -->
             <h3 class="text-2xl font-black uppercase mb-8">Project Gallery</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 1</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/1.jpeg" class="h-64 w-full object-cover" alt="Ralphs" onerror="this.src='projects/1.jpg'">
                     <div class="p-6">
-                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p>
-                        <h3 class="text-xl font-bold mb-3">Project Title</h3>
-                        <p class="text-sm text-slate-400 leading-6">Short description of project scope and electrical work performed.</p>
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">Ralphs</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Complete lighting, power, and panel installations including conduit runs.</p>
                     </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 2</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/2.jpeg" class="h-64 w-full object-cover" alt="American Meat" onerror="this.src='projects/2.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Industrial</p>
+                        <h3 class="text-xl font-bold mb-3">American Meat</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Built automation control panels and wiring for complex refrigeration sensor systems.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 3</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/3.jpeg" class="h-64 w-full object-cover" alt="Westminster Mall" onerror="this.src='projects/3.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">Westminster Mall</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Main site power distribution and parking lot panel services for mall infrastructure.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 4</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 4 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/4.jpeg" class="h-64 w-full object-cover" alt="J&J Snack Foods" onerror="this.src='projects/4.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Industrial</p>
+                        <h3 class="text-xl font-bold mb-3">J&J Snack Foods</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Facility expansion including comprehensive lighting, power systems, and panels.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 5</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 5 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/5.jpeg" class="h-64 w-full object-cover" alt="Lowe's" onerror="this.src='projects/5.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">Lowe's</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Full-scope installation of lighting, power panels, and industrial conduit systems.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 6</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 6 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/6.jpeg" class="h-64 w-full object-cover" alt="Fletcher Jones Automotive" onerror="this.src='projects/6.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">Fletcher Jones Automotive</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Professional automotive facility wiring including lighting and high-capacity power panels.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 7</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 7 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/7.jpeg" class="h-64 w-full object-cover" alt="Carl's Junior" onerror="this.src='projects/7.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">Carl's Junior</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Tenant improvement projects featuring updated lighting, power, and panel systems.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 8</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 8 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/8.jpeg" class="h-64 w-full object-cover" alt="24 Hour Fitness" onerror="this.src='projects/8.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">24 Hour Fitness</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Specialized relocation of equipment, TV power, and new conduit infrastructure.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 9</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 9 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/9.jpeg" class="h-64 w-full object-cover" alt="Cyron Lighting" onerror="this.src='projects/9.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Industrial</p>
+                        <h3 class="text-xl font-bold mb-3">Cyron Lighting</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Industrial machine installations, dedicated power lines, and lighting solutions.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 10</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 10 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/10.jpeg" class="h-64 w-full object-cover" alt="Don Jose Restaurant" onerror="this.src='projects/10.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">Don Jose Restaurant</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Full restaurant tenant improvement including lighting, power, and panel wiring.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 11</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 11 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/11.jpeg" class="h-64 w-full object-cover" alt="DHX" onerror="this.src='projects/11.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">DHX</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">High-efficiency lighting and warehouse power wiring for large-scale facilities.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                    <div class="h-56 bg-slate-700 flex items-center justify-center text-slate-500 uppercase tracking-widest text-sm">Project Image 12</div>
-                    <div class="p-6"><p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Client Name</p><h3 class="text-xl font-bold mb-3">Project Title</h3><p class="text-sm text-slate-400 leading-6">Short description of project scope.</p></div>
+
+                <!-- Project 12 -->
+                <div class="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 shadow-xl">
+                    <img src="projects/12.jpeg" class="h-64 w-full object-cover" alt="Burger King" onerror="this.src='projects/12.jpg'">
+                    <div class="p-6">
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Type: Commercial</p>
+                        <h3 class="text-xl font-bold mb-3">Burger King</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">New construction electrical including full power, lighting, and service panels.</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto bg-slate-50 rounded-3xl shadow-2xl overflow-hidden flex flex-wrap">
@@ -212,18 +289,17 @@
                         <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
                             <i class="fas fa-phone text-3xl text-yellow-600 mb-5"></i>
                             <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-2">Cellphone</p>
-                            <p class="text-xl font-black text-slate-900">(XXX) XXX-XXXX</p>
-                            <p class="text-xl font-black text-slate-900 mt-2">(XXX) XXX-XXXX</p>
+                            <p class="text-xl font-black text-slate-900">(949) 883-8611</p>
                         </div>
                         <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
                             <i class="fas fa-envelope text-3xl text-yellow-600 mb-5"></i>
                             <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-2">Email</p>
-                            <p class="text-xl font-black text-slate-900 break-all">info@akelectricworks.com</p>
+                            <p class="text-xl font-black text-slate-900 break-all">contact@akelectricworks.com</p>
                         </div>
                         <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm md:col-span-2">
                             <i class="fas fa-location-dot text-3xl text-yellow-600 mb-5"></i>
                             <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-2">Address</p>
-                            <p class="text-xl font-black text-slate-900">Add Business Address Here</p>
+                            <p class="text-xl font-black text-slate-900">18914 Demeter st., Fountain Valley, CA 92708</p>
                             <p class="text-sm text-slate-500 mt-3">Serving Los Angeles, Orange County, Riverside, and San Diego.</p>
                         </div>
                     </div>
